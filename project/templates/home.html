@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<div class="content">
+    <div class="containr-text">
+        <h2>AI-Powered
+            Requirements Analysis
+            Modeling</h1>
+            <h3>Efficiently analize and model project requirments with the cutting-edge power of AI.</h3>
+            <a href="/input" class="btn">Get start </a>
+    </div>
+    <div class="containr-image">
+        <img src="{{ url_for('static', filename='sercle.png') }}" alt="" class="shape"
+            style="width: 60vh; height: 60vh;">
+        <img src="{{ url_for('static', filename='input page.png') }}" alt="" class="input-page"
+            style="width: 50vh; height: 40vh;">
+    </div>
+</div>
+{%endblock%}

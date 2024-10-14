@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<div class="form-container">
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_file') }}">
+        <label>select file</label>
+        <input type="file" name="file" id="file" required>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+
+        <label>what's type of diagram want to drown?</label>
+        <select id="diagrams" name="diagrams">
+            <option value="class">Class Diagram</option>
+            <option value="usecase">Usecase Diagram</option>
+        </select>
+
+        <input type="submit" value="start generation">
+    </form>
+</div>
+{%endblock%}

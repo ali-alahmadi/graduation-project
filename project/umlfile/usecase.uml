@@ -1,0 +1,27 @@
+@startuml
+ 
+actor admin
+actor data
+actor system
+actor password
+actor user
+rectangle {
+usecase "change password" 
+usecase "add users" 
+usecase "logs" 
+usecase "delete users" 
+usecase "stores data" 
+usecase "recover password" 
+usecase "sends notification" 
+user --> "recover password"
+user --> "change password"
+data --> "stores data"
+password --> "recover password"
+admin --> "delete users"
+admin --> "add users"
+system --> "sends notification"
+system --> "stores data"
+system --> "logs"
+} 
+
+@enduml 

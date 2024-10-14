@@ -1,0 +1,38 @@
+@startuml
+
+'Classes:
+'-------------
+
+class system {
+  + logs()
+  + storesdata()
+  + sendsnotification()
+} 
+
+class password {
+  - password: String
+  - email: String
+  + recoverpassword()
+} 
+
+class admin {
+  + deleteusers()
+  + addusers()
+} 
+
+class data {
+  + storesdata()
+} 
+
+class user {
+  - password: String
+  - email: String
+  + recoverpassword()
+  + changepassword()
+} 
+
+'Associations:
+'-------------
+
+
+@enduml 
